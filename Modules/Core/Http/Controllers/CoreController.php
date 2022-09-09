@@ -15,7 +15,7 @@ class CoreController extends Controller
      */
     public function index()
     {
-        return Inertia::render('core::Index');
+        return Inertia::render('Core::Index');
     }
  
     /**

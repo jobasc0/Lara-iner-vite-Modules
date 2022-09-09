@@ -3,6 +3,7 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Modules\Core\Http\Controllers\CoreController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +16,7 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', 'Modules\Core\Http\Controllers\CoreController@index')->name('index');
+Route::get('/', [CoreController::class,'index'])->name('index');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
